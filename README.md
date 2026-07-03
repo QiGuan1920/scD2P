@@ -11,7 +11,7 @@ The model separates drug-associated transcriptional changes from intrinsic basal
 - Extract signed perturbation programs from residual expression using Incremental PCA.
 - Project external datasets into a fitted reference program space.
 - Annotate basal and perturbation programs using pathway enrichment.
-- Evaluate pathway-level reproducibility across experimental replicates.
+- Evaluate program reproducibility across experimental replicates.
 - Support downstream tasks such as mechanism-of-action-labeled drug clustering, perturbation expression prediction, and drug sensitivity classification.
 
 ## Repository structure
