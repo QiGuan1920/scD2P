@@ -156,16 +156,3 @@ Finally, Incremental PCA extracts signed perturbation programs from the residual
 ```text
 R - mean(R) ≈ Z_pert P
 ```
-
-## Citation
-
-If you use scD2P in your work, please cite the associated manuscript.
-
-```bibtex
-@article{scd2p,
-  title   = {scD2P: Single-cell drug-induced perturbation program modeling},
-  author  = {Your Name and Collaborators},
-  journal = {To be added},
-  year    = {2026}
-}
-```
