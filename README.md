@@ -2,7 +2,7 @@
 
 **scD2P** is an interpretable framework for modeling drug-induced perturbation programs from single-cell drug perturbation transcriptomic data.
 
-The model separates intrinsic basal cellular states from drug-associated transcriptional changes by using a basal state-corrected residual decomposition strategy. It learns basal programs from control cells, estimates expected unperturbed expression, and decomposes drug-induced residual expression into low-dimensional perturbation programs.
+The model separates drug-associated transcriptional changes from intrinsic basal cellular states by using a basal state-corrected residual decomposition strategy. It learns basal programs from control cells, estimates expected unperturbed expression, and decomposes drug-induced residual expression into low-dimensional perturbation programs.
 
 ## Key features
 
@@ -12,7 +12,7 @@ The model separates intrinsic basal cellular states from drug-associated transcr
 - Project external datasets into a fitted reference program space.
 - Annotate basal and perturbation programs using pathway enrichment.
 - Evaluate pathway-level reproducibility across experimental replicates.
-- Support downstream tasks such as mechanism-of-action-labeled drug clustering, perturbation expression prediction, IC50 prediction, and drug sensitivity classification.
+- Support downstream tasks such as mechanism-of-action-labeled drug clustering, perturbation expression prediction, and drug sensitivity classification.
 
 ## Repository structure
 
