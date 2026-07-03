@@ -63,7 +63,7 @@ scD2P expects an `AnnData` object with:
 - `adata.obs['perturbation']`: perturbation label for each cell.
 - `adata.var_names`: gene symbols or gene identifiers.
 
-For replicate-level pathway reproducibility analysis, the following columns are also used:
+For replicate-level reproducibility analysis, the following columns are also used:
 
 - `adata.obs['cell_line']`
 - `adata.obs['replicate']`
