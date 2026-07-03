@@ -44,7 +44,7 @@ scD2P-github/
 Clone the repository and install it in editable mode:
 
 ```bash
-git clone https://github.com/<your_name>/scD2P.git
+git clone https://github.com/QiGuan1920/scD2P.git
 cd scD2P
 pip install -e .
 ```
