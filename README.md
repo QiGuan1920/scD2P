@@ -18,7 +18,7 @@ The model separates drug-associated transcriptional changes from intrinsic basal
 
 ```text
 scD2P-github/
-├── scd2p/
+├── scD2P/
 │   ├── __init__.py
 │   ├── model.py              # Core scD2P fitting and projection
 │   ├── enrichment.py         # Program-to-pathway annotation
@@ -27,7 +27,7 @@ scD2P-github/
 │   ├── metrics.py            # Regression, expression, and classification metrics
 │   └── utils.py              # General utilities
 ├── scripts/
-│   ├── fit_scd2p.py          # Command-line model fitting
+│   ├── fit_scD2P.py          # Command-line model fitting
 │   ├── project_dataset.py    # Command-line external projection
 │   └── run_enrichment.py     # Command-line pathway enrichment
 ├── examples/
@@ -73,11 +73,11 @@ For replicate-level reproducibility analysis, the following columns are also use
 
 ```python
 import scanpy as sc
-from scd2p import fit_scd2p, save_model
+from scD2P import fit_scD2P, save_model
 
 adata = sc.read_h5ad("data/example.h5ad")
 
-model, outputs = fit_scd2p(
+model, outputs = fit_scD2P(
     adata,
     n_basal=16,
     n_pert=16,
@@ -86,8 +86,8 @@ model, outputs = fit_scd2p(
     layer="lognorm",
 )
 
-save_model(model, "outputs/scd2p_model.joblib")
-adata.write_h5ad("outputs/example_with_scd2p_embeddings.h5ad")
+save_model(model, "outputs/scD2P_model.joblib")
+adata.write_h5ad("outputs/example_with_scD2P_embeddings.h5ad")
 ```
 
 After fitting, scD2P writes the following representations:
@@ -101,10 +101,10 @@ After fitting, scD2P writes the following representations:
 Fit scD2P:
 
 ```bash
-python scripts/fit_scd2p.py \
+python scripts/fit_scD2P.py \
   --adata data/example.h5ad \
-  --out-model outputs/scd2p_model.joblib \
-  --out-adata outputs/example_with_scd2p_embeddings.h5ad \
+  --out-model outputs/scD2P_model.joblib \
+  --out-adata outputs/example_with_scD2P_embeddings.h5ad \
   --layer lognorm \
   --perturbation-col perturbation \
   --ctrl-label control \
@@ -117,7 +117,7 @@ Project an external dataset:
 ```bash
 python scripts/project_dataset.py \
   --adata data/external.h5ad \
-  --model outputs/scd2p_model.joblib \
+  --model outputs/scD2P_model.joblib \
   --out-adata outputs/external_projected.h5ad \
   --layer lognorm
 ```
@@ -126,13 +126,7 @@ Run pathway enrichment:
 
 ```bash
 python scripts/run_enrichment.py \
-  --model outputs/scd2p_model.joblib \
+  --model outputs/scD2P_model.joblib \
   --gmt data/h.all.v2026.1.Hs.symbols.gmt \
   --out-dir outputs/enrichment
-```
-
-Finally, Incremental PCA extracts signed perturbation programs from the residual space:
-
-```text
-R - mean(R) ≈ Z_pert P
 ```
