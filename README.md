@@ -62,8 +62,8 @@ scD2P expects an `AnnData` object with:
 - `adata.layers['lognorm']`: normalized expression matrix.
 - `adata.obs['perturbation']`: perturbation label for each cell.
 - `adata.var_names`: gene symbols or gene identifiers.
-- `adata.obs['cell_line']`
-- `adata.obs['is_ctrl']`
+- `adata.obs['cell_line']`: cell line identifier for each cell.
+- `adata.obs['is_ctrl']`: control cell indicator for each cell.
 
 For replicate-level reproducibility analysis, the following columns are also used:
 
