@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scD2P"
+version = "0.1.0"
+description = "Interpretable single-cell drug-induced perturbation program modeling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "scD2P contributors"}
+]
+dependencies = [
+    "numpy>=1.22",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "scikit-learn>=1.2",
+    "anndata>=0.8",
+    "scanpy>=1.9",
+    "statsmodels>=0.13",
+    "joblib>=1.2",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.6", "seaborn>=0.12"]
+dev = ["pytest>=7.0", "ruff>=0.1.0", "black>=23.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scD2P*"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "B"]
+ignore = []

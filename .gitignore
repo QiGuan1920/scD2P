@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and outputs
+data/
+outputs/
+model_export/
+*.h5ad
+*.joblib
+*.pkl
+
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
