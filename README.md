@@ -131,26 +131,6 @@ python scripts/run_enrichment.py \
   --out-dir outputs/enrichment
 ```
 
-## Model overview
-
-Let `X` denote the normalized expression matrix. scD2P first learns basal programs from control cells using consensus NMF:
-
-```text
-X_control ≈ Z_basal H_basal
-```
-
-Then a ridge model predicts expected basal expression:
-
-```text
-X_basal_hat = Z_basal B + a
-```
-
-Drug-associated residual expression is computed as:
-
-```text
-R = X - X_basal_hat
-```
-
 Finally, Incremental PCA extracts signed perturbation programs from the residual space:
 
 ```text
