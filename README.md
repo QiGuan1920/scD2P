@@ -65,7 +65,7 @@ scD2P expects an `AnnData` object with:
 - `adata.obs['cell_line']`: cell line identifier for each cell.
 - `adata.obs['is_ctrl']`: control cell indicator for each cell.
 
-For replicate-level reproducibility analysis, the following columns are also used:
+For replicate-level reproducibility analysis, the following column is also used:
 
 - `adata.obs['replicate']`
 
